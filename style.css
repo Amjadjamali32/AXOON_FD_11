@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.todo-container {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 550px;
+}
+
+h1 {
+  text-align: center;
+  color: #3e4b5b;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input#taskInput {
+  flex: 1;
+  padding: 12px 14px;
+  border: 2px solid #dce3f0;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+#addTaskBtn {
+  padding: 12px 18px;
+  background-color: #4e8ef7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#addTaskBtn:hover {
+  background-color: #3b73db;
+}
+
+ul#taskList {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border: 1px solid #e1e7f0;
+  border-radius: 10px;
+  background: #fafcff;
+  transition: transform 0.2s;
+  flex-wrap: wrap;
+}
+
+.task-item:hover {
+  transform: scale(1.02);
+}
+
+.task-text {
+  flex: 1 1 60%;
+  font-size: 16px;
+  word-break: break-word;
+}
+
+.task-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  flex: 1 1 40%;
+  justify-content: flex-end;
+}
+
+.task-actions button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+}
+
+.edit-btn {
+  background-color: #ffd447;
+}
+
+.edit-btn:hover {
+  background-color: #ffc107;
+}
+
+.delete-btn {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #e63946;
+}
+
+/* Mobile optimization */
+@media (max-width: 480px) {
+  .input-group {
+    flex-direction: column;
+  }
+
+  #addTaskBtn {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  input#taskInput {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .task-text {
+    flex: 1 1 100%;
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .task-actions {
+    flex: 1 1 100%;
+    justify-content: space-between;
+  }
+}
